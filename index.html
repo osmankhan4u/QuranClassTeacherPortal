@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quran Class Teacher Portal Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .nav-item.active { background: linear-gradient(to right, rgb(16, 185, 129), rgb(5, 150, 105)); color: #fff; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-emerald-50 via-amber-50 to-teal-50 text-gray-800">
+  <div class="min-h-screen">
+    <div class="fixed inset-0 opacity-5 pointer-events-none">
+      <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 60px 60px;"></div>
+    </div>
+
+    <button id="navToggle" type="button" aria-label="Toggle navigation" class="fixed top-6 right-6 z-50 bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-3 rounded-full shadow-2xl hover:scale-110 transition-transform border-2 border-amber-400">
+      <i data-lucide="book-open" class="w-6 h-6"></i>
+    </button>
+
+    <div id="navOverlay" class="fixed inset-0 bg-black/40 z-30 hidden"></div>
+    <div id="navPanel" class="fixed top-0 right-0 h-screen w-80 bg-white shadow-2xl z-40 overflow-y-auto border-l-4 border-emerald-600 transform translate-x-full transition-transform duration-300">
+      <div class="p-6 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
+        <h3 class="text-xl font-bold mb-2">Slides</h3>
+        <p class="text-sm text-emerald-100">Jump to any section</p>
+      </div>
+      <div class="p-4">
+        <div id="navItems" class="space-y-1"></div>
+      </div>
+    </div>
+
+    <section id="title" class="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-teal-900/90 to-emerald-800/90"></div>
+        <div class="absolute top-14 left-16 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-16 right-16 w-96 h-96 bg-emerald-400/25 rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative max-w-5xl mx-auto text-center text-white">
+        <div class="mb-8 inline-block">
+          <div class="relative">
+            <div class="w-36 h-36 mx-auto bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20">
+              <i data-lucide="book-open-check" class="w-16 h-16 text-white"></i>
+            </div>
+            <div class="absolute -top-3 -right-3 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white">
+              <i data-lucide="star" class="w-6 h-6 text-white"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm uppercase tracking-[0.35em] text-emerald-100 mb-2">Quran Class Teacher Portal</p>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">A Unified Platform for Quran Teaching Excellence</h1>
+        <div class="w-32 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-4"></div>
+        <p class="text-xl md:text-2xl text-emerald-100 mb-8"> Quran Learning Program</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+          <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur">Prepare</span>
+          <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur">Teach</span>
+          <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur">Inspire</span>
+          <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur">Improve</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-block px-5 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">Slide 2</div>
+          <h2 class="text-4xl font-bold mb-3">Our Vision</h2>
+          <p class="text-lg text-gray-600">Create the world's most powerful, accessible, and scholar-approved platform that empowers teachers to prepare, teach, and inspire with confidence.</p>
+        </div>
+        <div class="bg-white shadow-xl rounded-2xl p-8 border-l-4 border-emerald-600">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center">
+              <i data-lucide="target" class="w-6 h-6 text-emerald-600"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-emerald-700">Vision Statement</h3>
+          </div>
+          <p class="text-gray-700 leading-relaxed">To create the world's most powerful, accessible, and scholar-approved platform that empowers Quran teachers to prepare, teach, and inspire with confidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-needed" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Why This Platform Is Needed</h2>
+          <p class="text-gray-600">Addressing current gaps and challenges</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-br from-red-50 to-amber-50 border border-red-100 rounded-2xl p-8 shadow-lg">
+            <h3 class="text-2xl font-semibold text-red-700 mb-4 flex items-center gap-3">
+              <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+              Challenges Today
+            </h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span>Teachers prepare from scattered resources</span></li>
+              <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span>Limited access to scholarly references</span></li>
+              <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span>Teaching style varies widely across teachers</span></li>
+              <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span>No centralized preparation tool</span></li>
+              <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span>No easy access to hadith or seerah evidence</span></li>
+              <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span>No system for teacher improvement</span></li>
+            </ul>
+          </div>
+          <div class="bg-white border-l-4 border-emerald-500 rounded-2xl p-8 shadow-lg">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center">
+                <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-emerald-700">Solution Focus</h3>
+            </div>
+            <p class="text-gray-700 leading-relaxed">This platform unifies preparation, teaching, verification, and improvement so teachers focus on students instead of tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform-provides" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">What The Platform Provides</h2>
+          <p class="text-gray-600">All essentials in one place</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3 flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5"></i>Core Content</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>All surah content</li>
+              <li>Teaching guidelines</li>
+              <li>Key ayat explanations</li>
+              <li>Hadith and seerah references</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3 flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5"></i>Teacher Workspace</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Glossary and terminology</li>
+              <li>Personal notes</li>
+              <li>Audio preparation</li>
+              <li>Class recordings</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3 flex items-center gap-2"><i data-lucide="layout-dashboard" class="w-5 h-5"></i>Teaching Mode</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>In-class teaching mode</li>
+              <li>Resource library</li>
+              <li>Roadmaps</li>
+              <li>Activities and assessments</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 bg-amber-50 border border-amber-200 rounded-2xl p-6 text-amber-900 text-center shadow">
+          <p class="font-semibold">Reduces preparation time, increases confidence, creates consistency.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">High-Level Features</h2>
+          <p class="text-gray-600">Covering the full teaching cycle</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-2xl border border-emerald-100 shadow">
+            <h3 class="text-xl font-semibold mb-3 flex gap-2 items-center text-emerald-700"><i data-lucide="notebook" class="w-5 h-5"></i>Preparation</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Surah teaching workspace</li>
+              <li>Hadith library</li>
+              <li>Seerah timeline</li>
+              <li>Glossary and terminology</li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-2xl border border-amber-100 shadow">
+            <h3 class="text-xl font-semibold mb-3 flex gap-2 items-center text-amber-700"><i data-lucide="play-circle" class="w-5 h-5"></i>Delivery</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Teaching roadmap</li>
+              <li>Audio and class recordings</li>
+              <li>Teacher notes</li>
+              <li>In-class mode</li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 shadow">
+            <h3 class="text-xl font-semibold mb-3 flex gap-2 items-center text-blue-700"><i data-lucide="bar-chart-3" class="w-5 h-5"></i>Growth</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>My classes</li>
+              <li>Activities and assessments</li>
+              <li>Resource library</li>
+              <li>Admin and scholar tools</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-700 font-semibold">Covers the entire cycle: learn - prepare - teach - improve.</div>
+      </div>
+    </section>
+
+    <section id="philosophy" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Core Philosophy</h2>
+          <p class="text-gray-600">Principles that shape the platform</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3 flex gap-2 items-center"><i data-lucide="users" class="w-5 h-5"></i>Teacher-Oriented</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Reduces preparation burden</li>
+              <li>Empowers teaching quality</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3 flex gap-2 items-center"><i data-lucide="shield-check" class="w-5 h-5"></i>Scholar-Verified</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Accuracy and authenticity guaranteed</li>
+              <li>Consistent delivery across classes</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3 flex gap-2 items-center"><i data-lucide="git-commit" class="w-5 h-5"></i>Consistent Delivery</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Standardized approach for every teacher</li>
+              <li>Reliable classroom flow</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3 flex gap-2 items-center"><i data-lucide="sparkles" class="w-5 h-5"></i>Modern Education Design</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Intuitive, structured, accessible</li>
+              <li>Built for long-term excellence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="surah-workspace" class="py-20 px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 text-sm font-semibold mb-4">Single Surah Workspace</div>
+          <h2 class="text-4xl font-bold mb-3">Surah Teaching Workspace</h2>
+          <p class="text-gray-600">A single, scholar-verified dashboard that guides every teacher from prep to in-class delivery.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 items-stretch">
+          <div class="bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100 border border-emerald-100 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
+            <h3 class="text-2xl font-semibold text-emerald-800 flex items-center gap-2">
+              <i data-lucide="layout-grid" class="w-6 h-6"></i>Why one workspace
+            </h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex gap-2"><span class="text-emerald-600 mt-1">•</span><span>Replaces scattered notes/PDFs/word docs with one prep hub, cutting time and preventing gaps.</span></li>
+              <li class="flex gap-2"><span class="text-emerald-600 mt-1">•</span><span>Standard structure per surah keeps delivery consistent across teachers and classes.</span></li>
+              <li class="flex gap-2"><span class="text-emerald-600 mt-1">•</span><span>Aligned with Our Quran Class(Revelation Pattern) methodology so teachers teach with confidence.</span></li>
+            </ul>
+            <div class="grid sm:grid-cols-3 gap-3 text-sm">
+              <div class="bg-white/70 border border-white rounded-xl p-3 shadow-sm">
+                <p class="font-semibold text-emerald-700">Outcome-first</p>
+                <p class="text-gray-600 text-xs">Objectives + roadmap up front.</p>
+              </div>
+              <div class="bg-white/70 border border-white rounded-xl p-3 shadow-sm">
+                <p class="font-semibold text-emerald-700">Scholar-verified</p>
+                <p class="text-gray-600 text-xs">Hadith, seerah, glossary vetted.</p>
+              </div>
+              <div class="bg-white/70 border border-white rounded-xl p-3 shadow-sm">
+                <p class="font-semibold text-emerald-700">In-class ready</p>
+                <p class="text-gray-600 text-xs">One tap to live teaching view.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-2xl border border-emerald-100 overflow-hidden">
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white px-6 py-4 flex items-center justify-between">
+              <div>
+                <p class="text-sm opacity-90">Surah Dashboard (Mock)</p>
+                <h4 class="text-2xl font-bold">Al-Fatihah</h4>
+                <p class="text-sm text-emerald-100">Makki • 7 ayat • Theme: Guidance & Mercy</p>
+              </div>
+              <div class="flex gap-2 text-xs">
+                <span class="px-3 py-1 rounded-full bg-white/15 border border-white/20">Overview</span>
+                <span class="px-3 py-1 rounded-full bg-white/15 border border-white/20">Sections</span>
+                <span class="px-3 py-1 rounded-full bg-white/15 border border-white/20">Live Mode</span>
+              </div>
+            </div>
+            <div class="p-6 grid md:grid-cols-2 gap-5 bg-emerald-50/40">
+              <div class="space-y-4">
+                <div class="bg-white rounded-xl p-4 border border-emerald-100 shadow-sm">
+                  <div class="flex items-center justify-between mb-2">
+                    <p class="text-sm font-semibold text-emerald-700">Overview</p>
+                    <span class="text-xs text-gray-500">Title, themes, objectives</span>
+                  </div>
+                  <p class="text-sm text-gray-700">Objectives: mercy arc; link to daily salah; clear outcomes.</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-emerald-100 shadow-sm">
+                  <div class="flex items-center justify-between mb-2">
+                    <p class="text-sm font-semibold text-emerald-700">Structure & Sections</p>
+                    <span class="text-xs text-emerald-600">Ayat ranges</span>
+                  </div>
+                  <ul class="text-sm text-gray-700 space-y-1">
+                    <li>1-3: Praise & majesty</li>
+                    <li>4-5: Tawhid & dependence</li>
+                    <li>6-7: Guidance request & paths</li>
+                  </ul>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-emerald-100 shadow-sm">
+                  <div class="flex items-center justify-between mb-2">
+                    <p class="text-sm font-semibold text-emerald-700">Key Ayat</p>
+                    <span class="text-xs text-gray-500">Must-hit</span>
+                  </div>
+                  <ul class="text-sm text-gray-700 space-y-1">
+                    <li>Ayah 1-3: Praise Allah — reflection prompt.</li>
+                    <li>Ayah 5: Dua posture + class activity.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-white rounded-xl p-4 border border-emerald-100 shadow-sm">
+                  <p class="text-sm font-semibold text-emerald-700 mb-2">Hadith & Seerah Links</p>
+                  <p class="text-sm text-gray-700">Source numbers with usage notes; scholar verified.</p>
+                  <p class="text-xs text-gray-500 mt-1">Answer “why revealed?” confidently.</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-emerald-100 shadow-sm">
+                  <p class="text-sm font-semibold text-emerald-700 mb-2">Glossary & Names</p>
+                  <p class="text-sm text-gray-700">Chips: Rahman, Rahim, Sirat, Maghdub, Dallin; people/places tagged.</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-emerald-100 shadow-sm">
+                  <p class="text-sm font-semibold text-emerald-700 mb-2">Audio & Recordings</p>
+                  <ul class="text-sm text-gray-700 space-y-1">
+                    <li>Official teaching audio (admin)</li>
+                    <li>Senior teacher session</li>
+                    <li>My upload + notes</li>
+                  </ul>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-emerald-100 shadow-sm">
+                  <p class="text-sm font-semibold text-emerald-700 mb-2">Teaching Roadmap</p>
+                  <p class="text-sm text-gray-700">Start → deliver → end with time splits; pitfalls flagged.</p>
+                  <p class="text-xs text-gray-500 mt-1">Toggle In-Class Mode for live flow.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14">
+          <div class="text-center mb-6">
+            <h3 class="text-2xl font-semibold text-emerald-800">Workspace modules at a glance</h3>
+            <p class="text-gray-600 text-sm">Logical flow: see context, plan delivery, engage, and review.</p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Overview</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Title meaning, themes, objectives.</li>
+                <li>Outcome-focused start.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Background & Revelation</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Historical/emotional context.</li>
+                <li>“Why revealed?” answered properly.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Structure & Sections</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Ayat grouped by ranges.</li>
+                <li>Lesson/time planning simplified.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Key Ayat</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Must-hit list for class time.</li>
+                <li>Supports memorization and reflection.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Hadith & Sunnah</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Scholar-mapped references.</li>
+                <li>Authentic support for themes.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Seerah & Events</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Ready narratives with dates/places.</li>
+                <li>Prevents weak storytelling.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Glossary & Names</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>People/places/terms chips.</li>
+                <li>Age-appropriate clarity.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Teaching Roadmap</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Start → deliver → end pacing.</li>
+                <li>Uniform quality for all teachers.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Activities & Assessments</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Engagement + verification.</li>
+                <li>Age tagging for kids/teens/adults.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Audio & Recordings</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Official audio, senior sessions, my uploads.</li>
+                <li>Benchmark, learn, self-review.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Teacher Notes & Attachments</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Personal analogies stay in context.</li>
+                <li>Uploads (handwritten/PPT/mind maps) organized.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">Resources Library</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Approved slides, handouts, charts.</li>
+                <li>Prep time saved; aligned materials.</li>
+              </ul>
+            </div>
+            <div class="bg-white border border-emerald-100 rounded-2xl p-5 shadow-sm">
+              <p class="font-semibold text-emerald-700">In-Class Mode</p>
+              <ul class="text-sm text-gray-700 space-y-1 mt-2">
+                <li>Quick switches: ayah, hadith, glossary.</li>
+                <li>Lowers cognitive load live.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="background-context" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Background and Revelation Context</h2>
+          <p class="text-gray-600">Setting the scene for each surah</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">Includes</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Asbab an-Nuzul</li>
+              <li>Historical background</li>
+              <li>Emotional and social conditions</li>
+              <li>Phase of Seerah</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-amber-700 mb-3">Why It Matters</h3>
+            <p class="text-gray-700">Context prevents misunderstanding and makes each surah relatable to students.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure-sections" class="py-20 px-6 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Structure and Sections</h2>
+          <p class="text-gray-600">Organize ayat into teachable sections</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <h3 class="text-2xl font-semibold text-emerald-700 mb-4 flex gap-2 items-center"><i data-lucide="list-checks" class="w-6 h-6"></i>Approach</h3>
+          <p class="text-gray-700 mb-4">Ayat grouped into meaningful sections with summaries and teaching points.</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-emerald-50 rounded-xl p-4">
+              <p class="font-semibold text-emerald-700">Benefits</p>
+              <ul class="text-gray-700 space-y-2 mt-2">
+                <li>Helps deliver the surah as a flowing message</li>
+                <li>Supports easy time planning (e.g., one section per class)</li>
+              </ul>
+            </div>
+            <div class="bg-amber-50 rounded-xl p-4">
+              <p class="font-semibold text-amber-700">Teaching Impact</p>
+              <p class="text-gray-700 mt-2">Keeps students oriented and focused throughout the session.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="key-ayat" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Key Ayat to Emphasize</h2>
+          <p class="text-gray-600">Highlight what matters most</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">What We Capture</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Why the ayah is important</li>
+              <li>How to explain it</li>
+              <li>Real-life application</li>
+              <li>Tags for difficulty and age group</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-amber-700 mb-3">Why It Matters</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Helps teachers focus on impactful ayat</li>
+              <li>Boosts memorization and understanding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hadith-module" class="py-20 px-6 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Hadith and Sunnah Module</h2>
+          <p class="text-gray-600">Scholar-approved references linked to each surah</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <p class="font-semibold text-emerald-700 mb-2">What We Provide</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>Authentic hadith linked to surah themes</li>
+                <li>Source and authenticity</li>
+                <li>Usage guidance</li>
+              </ul>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-4">
+              <p class="font-semibold text-emerald-700 mb-2">Why</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>Gives teachers confidence to reference authentic Sunnah</li>
+                <li>Adds depth and credibility to teaching</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seerah" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Seerah and Historical Events</h2>
+          <p class="text-gray-600">Connect history to each surah</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">What Is Included</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Timeline of events</li>
+              <li>Key figures and locations</li>
+              <li>Connections to the surah</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-amber-700 mb-3">Why It Matters</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Makes the Quran come alive</li>
+              <li>Supports historically accurate storytelling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="glossary" class="py-20 px-6 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Glossary and Terminology</h2>
+          <p class="text-gray-600">Clear meanings for complex terms</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <p class="font-semibold text-emerald-700 mb-2">What</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>Arabic terms with root letters</li>
+                <li>Detailed simplified meanings</li>
+                <li>People, places, and dates</li>
+              </ul>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-4">
+              <p class="font-semibold text-emerald-700 mb-2">Why</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>Teachers explain faster and more accurately</li>
+                <li>Students understand complex words easily</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching-roadmap" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Teaching Roadmap</h2>
+          <p class="text-gray-600">Step-by-step delivery guidance</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">What We Provide</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Start-of-class script</li>
+              <li>Delivery flow and time split</li>
+              <li>Pitfalls to avoid</li>
+              <li>Closing dua</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-amber-700 mb-3">Why</h3>
+            <p class="text-gray-700">Ensures clear, confident, and consistent delivery across all teachers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Activities and Assessments</h2>
+          <p class="text-gray-600">Engagement tools for every age</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-emerald-700 mb-2">What</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Discussions and reflection tasks</li>
+              <li>MCQs and short answers</li>
+              <li>Age-based filtering</li>
+            </ul>
+          </div>
+          <div class="bg-emerald-50 rounded-2xl p-8 shadow border border-emerald-100">
+            <p class="font-semibold text-emerald-700 mb-2">Why</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Engagement boosts memory and retention</li>
+              <li>Helps teachers verify understanding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="audio-module" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Audio Module</h2>
+          <p class="text-gray-600">Official audio and structured listening</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-emerald-700 mb-2">What</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>One standard surah audio uploaded by admin</li>
+              <li>Mandatory listening with tracking</li>
+              <li>Progress indicators</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-amber-700 mb-2">Why</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Ensures teachers learn the same correct approach</li>
+              <li>Acts as a model lesson</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="senior-audio" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Senior Teacher Audio Library</h2>
+          <p class="text-gray-600">Learn from expert delivery styles</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <ul class="space-y-2 text-gray-700">
+            <li>Recordings from expert teachers</li>
+            <li>Highlights and notes</li>
+          </ul>
+          <div class="mt-6 bg-emerald-50 rounded-xl p-4 text-emerald-700 font-semibold">Supports peer learning and training.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="class-recordings" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Teacher's Own Class Recordings</h2>
+          <p class="text-gray-600">Reflect and improve with feedback</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-emerald-700 mb-2">What</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Upload class audio</li>
+              <li>Self-review notes</li>
+              <li>Optional scholar feedback</li>
+            </ul>
+          </div>
+          <div class="bg-emerald-50 rounded-2xl p-8 shadow border border-emerald-100">
+            <p class="font-semibold text-emerald-700 mb-2">Why</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Enables continuous improvement</li>
+              <li>Forms foundation for train-the-trainer system</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teacher-notes" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Teacher Notes and Attachments</h2>
+          <p class="text-gray-600">Organize personal learning</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <ul class="space-y-2 text-gray-700">
+            <li>Rich text notes and ayah-specific comments</li>
+            <li>PDF, PPT, and image uploads</li>
+            <li>Personal learning stays organized within the surah</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="resource-library" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Resource Library</h2>
+          <p class="text-gray-600">Consistent materials for every class</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-emerald-700 mb-2">What</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Slides, handouts, and charts</li>
+              <li>Printable summaries</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-amber-700 mb-2">Why</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Saves preparation time</li>
+              <li>Ensures consistent teaching materials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="presentation-mode" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">In-Class Presentation Mode</h2>
+          <p class="text-gray-600">Clean display tailored for teaching</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <ul class="space-y-2 text-gray-700">
+            <li>Large clean ayah display with translation toggle</li>
+            <li>Quick access to hadith, glossary, and notes</li>
+            <li>Next and previous flow for smooth sessions</li>
+          </ul>
+          <div class="mt-6 bg-emerald-50 rounded-xl p-4 text-emerald-700 font-semibold">Reduces classroom stress and keeps focus on students.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="my-classes" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">My Classes and Assignments</h2>
+          <p class="text-gray-600">Organized teaching at a glance</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-emerald-700 mb-2">What</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>View assigned surahs</li>
+              <li>Class schedule and reminders</li>
+              <li>Access past recordings</li>
+            </ul>
+          </div>
+          <div class="bg-emerald-50 rounded-2xl p-8 shadow border border-emerald-100">
+            <p class="font-semibold text-emerald-700 mb-2">Why</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Keeps teaching organized and structured</li>
+              <li>Makes transitions between classes smoother</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scholar-admin" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Scholar and Admin Tools</h2>
+          <p class="text-gray-600">Maintain integrity and control</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">For Scholars</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Approve content</li>
+              <li>Give feedback on teacher recordings</li>
+              <li>Manage hadith, seerah, and glossary accuracy</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-amber-200 rounded-2xl p-8 shadow">
+            <h3 class="text-xl font-semibold text-amber-700 mb-3">For Admins</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Manage users and class assignments</li>
+              <li>Upload official audio and resources</li>
+              <li>Oversee platform health</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-6 text-center text-emerald-700 font-semibold">Maintains academic integrity and administration control.</div>
+      </div>
+    </section>
+
+    <section id="global-search" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Global Search</h2>
+          <p class="text-gray-600">Find everything instantly</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <p class="font-semibold text-emerald-700 mb-3">Search across:</p>
+          <div class="grid md:grid-cols-3 gap-4 text-gray-700">
+            <div class="bg-emerald-50 rounded-xl p-4 shadow-sm">
+              <ul class="space-y-1">
+                <li>Surahs</li>
+                <li>Ayat</li>
+                <li>Hadith</li>
+              </ul>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-4 shadow-sm">
+              <ul class="space-y-1">
+                <li>Seerah</li>
+                <li>Glossary</li>
+                <li>Resources</li>
+              </ul>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-4 shadow-sm">
+              <ul class="space-y-1">
+                <li>Notes</li>
+                <li>Audio recordings</li>
+              </ul>
+            </div>
+          </div>
+          <p class="mt-6 text-center text-gray-700 font-semibold">Saves time and supports quick answers during prep or in class.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Technical Architecture</h2>
+          <p class="text-gray-600">Reliable, scalable, and fast</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-emerald-700 mb-2">Stack</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Angular frontend</li>
+              <li>ASP.NET Core backend</li>
+              <li>SQL database</li>
+              <li>Blob storage</li>
+              <li>Redis cache</li>
+              <li>Search engine</li>
+              <li>JWT authentication</li>
+            </ul>
+          </div>
+          <div class="bg-emerald-50 rounded-2xl p-8 shadow border border-emerald-100">
+            <p class="font-semibold text-emerald-700 mb-2">Why</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Enables smooth multimedia access</li>
+              <li>Easy for future expansion</li>
+              <li>Performance-first architecture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="database" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Database Overview</h2>
+          <p class="text-gray-600">Clean modular schema</p>
+        </div>
+        <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+          <div class="grid md:grid-cols-3 gap-4 text-gray-700">
+            <div class="bg-emerald-50 rounded-xl p-4 shadow-sm">
+              <p class="font-semibold text-emerald-700 mb-2">Content</p>
+              <ul class="space-y-1">
+                <li>Surahs</li>
+                <li>Sections</li>
+                <li>Key ayat</li>
+              </ul>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-4 shadow-sm">
+              <p class="font-semibold text-emerald-700 mb-2">References</p>
+              <ul class="space-y-1">
+                <li>Hadith</li>
+                <li>Seerah</li>
+                <li>Glossary</li>
+              </ul>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-4 shadow-sm">
+              <p class="font-semibold text-emerald-700 mb-2">Operations</p>
+              <ul class="space-y-1">
+                <li>Audio and resources</li>
+                <li>Classes and users</li>
+                <li>Notes and attachments</li>
+              </ul>
+            </div>
+          </div>
+          <p class="mt-6 text-center text-gray-700 font-semibold">Built for quick retrieval and performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="train-trainer" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Future: Train the Trainer</h2>
+          <p class="text-gray-600">Building tomorrow's teachers today</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <p class="font-semibold text-emerald-700 mb-2">What</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Teacher certification path</li>
+              <li>Evaluation rubrics</li>
+              <li>Teaching skills modules</li>
+              <li>Mock class assessments</li>
+            </ul>
+          </div>
+          <div class="bg-emerald-50 rounded-2xl p-8 shadow border border-emerald-100">
+            <p class="font-semibold text-emerald-700 mb-2">Why</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>Builds a pipeline of high-quality future teachers</li>
+              <li>Standardizes teaching excellence across the institution</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Summary</h2>
+          <p class="text-gray-600">Impact of the Quran Class Teacher Portal</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-emerald-100 rounded-2xl p-8 shadow">
+            <ul class="space-y-2 text-gray-700">
+              <li>Empowers teachers</li>
+              <li>Reduces preparation time</li>
+              <li>Ensures scholarly accuracy</li>
+              <li>Creates consistent teaching quality</li>
+              <li>Enhances student experience</li>
+              <li>Builds long-term institutional excellence</li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl p-8 text-white shadow-2xl">
+            <p class="text-xl font-semibold mb-3">Reasoning</p>
+            <p class="text-emerald-50">A single platform enhances how teachers prepare, teach, and improve while keeping authenticity at the center.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thank-you" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-emerald-900 via-teal-900 to-emerald-800 text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-amber-400 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-emerald-400 rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <div class="w-28 h-28 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-2xl mb-8 border-4 border-white/20">
+          <i data-lucide="hand-heart" class="w-12 h-12 text-white"></i>
+        </div>
+        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Thank You</h2>
+        <p class="text-2xl text-emerald-100 mb-4">Questions and discussion</p>
+        <p class="text-lg text-emerald-100">Together we strengthen Quran teaching for every class and every teacher.</p>
+      </div>
+    </section>
+
+    <div id="progressIndicator" class="fixed bottom-6 left-6 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-full shadow-2xl px-5 py-3 text-sm font-semibold z-40 border-2 border-amber-400">1 / 29</div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = [
+        { id: 'title', title: 'Title Slide', icon: 'book-open-check' },
+        { id: 'vision', title: 'Vision Statement', icon: 'target' },
+        { id: 'why-needed', title: 'Why Needed', icon: 'alert-triangle' },
+        { id: 'platform-provides', title: 'What It Provides', icon: 'layers' },
+        { id: 'features', title: 'High-Level Features', icon: 'zap' },
+        { id: 'philosophy', title: 'Core Philosophy', icon: 'heart' },
+        { id: 'surah-workspace', title: 'Surah Workspace', icon: 'layout-grid' },
+        { id: 'background-context', title: 'Background & Context', icon: 'history' },
+        { id: 'structure-sections', title: 'Structure & Sections', icon: 'list-checks' },
+        { id: 'key-ayat', title: 'Key Ayat', icon: 'bookmark' },
+        { id: 'hadith-module', title: 'Hadith Module', icon: 'book' },
+        { id: 'seerah', title: 'Seerah Links', icon: 'map-pin' },
+        { id: 'glossary', title: 'Glossary', icon: 'book-open' },
+        { id: 'teaching-roadmap', title: 'Teaching Roadmap', icon: 'navigation' },
+        { id: 'activities', title: 'Activities', icon: 'check-square' },
+        { id: 'audio-module', title: 'Audio Module', icon: 'headphones' },
+        { id: 'senior-audio', title: 'Senior Teacher Audio', icon: 'mic' },
+        { id: 'class-recordings', title: 'Class Recordings', icon: 'radio' },
+        { id: 'teacher-notes', title: 'Teacher Notes', icon: 'sticky-note' },
+        { id: 'resource-library', title: 'Resource Library', icon: 'archive' },
+        { id: 'presentation-mode', title: 'Presentation Mode', icon: 'monitor' },
+        { id: 'my-classes', title: 'My Classes', icon: 'calendar' },
+        { id: 'scholar-admin', title: 'Scholar & Admin', icon: 'shield' },
+        { id: 'global-search', title: 'Global Search', icon: 'search' },
+        { id: 'architecture', title: 'Architecture', icon: 'server' },
+        { id: 'database', title: 'Database', icon: 'database' },
+        { id: 'train-trainer', title: 'Train the Trainer', icon: 'graduation-cap' },
+        { id: 'summary', title: 'Summary', icon: 'list' },
+        { id: 'thank-you', title: 'Thank You', icon: 'message-square' }
+      ];
+
+      const navPanel = document.getElementById('navPanel');
+      const navToggle = document.getElementById('navToggle');
+      const navOverlay = document.getElementById('navOverlay');
+      const navItems = document.getElementById('navItems');
+      const progressIndicator = document.getElementById('progressIndicator');
+      const navButtons = [];
+
+      const toggleNav = () => {
+        const isHidden = navPanel.classList.contains('translate-x-full');
+        navPanel.classList.toggle('translate-x-full');
+        navOverlay.classList.toggle('hidden');
+        navToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+      };
+
+      navToggle?.addEventListener('click', toggleNav);
+      navOverlay?.addEventListener('click', () => {
+        if (!navPanel.classList.contains('translate-x-full')) {
+          toggleNav();
+        }
+      });
+
+      sections.forEach((section, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'nav-item w-full text-left px-4 py-3 rounded-lg transition-all flex items-center gap-3 hover:bg-emerald-50 text-gray-700';
+        button.innerHTML = `<i data-lucide="${section.icon}" class="w-4 h-4"></i><span class="text-sm">${index + 1}. ${section.title}</span>`;
+        button.addEventListener('click', () => {
+          document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+          if (!navPanel.classList.contains('translate-x-full')) {
+            toggleNav();
+          }
+        });
+        navItems.appendChild(button);
+        navButtons.push(button);
+      });
+
+      const setActiveSection = (index) => {
+        navButtons.forEach((btn, idx) => {
+          btn.classList.toggle('active', idx === index);
+        });
+        if (progressIndicator) {
+          progressIndicator.textContent = `${index + 1} / ${sections.length}`;
+        }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = sections.findIndex((s) => s.id === entry.target.id);
+            if (index >= 0) {
+              setActiveSection(index);
+            }
+          }
+        });
+      }, { threshold: 0.4 });
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) observer.observe(element);
+      });
+
+      setActiveSection(0);
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
