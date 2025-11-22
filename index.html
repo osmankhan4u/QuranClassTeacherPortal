@@ -14,6 +14,15 @@
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-amber-50 to-indigo-50 text-gray-800">
   <div class="min-h-screen">
+    <div id="imageModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center px-4">
+      <div class="relative bg-white rounded-2xl shadow-2xl max-w-5xl w-full overflow-hidden">
+        <button id="closeImageModal" class="absolute top-3 right-3 bg-white/90 text-gray-800 rounded-full p-2 shadow hover:bg-white focus:outline-none border border-gray-200" aria-label="Close image preview">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <img id="imageModalContent" src="" alt="Expanded view" class="w-full max-h-[80vh] object-contain bg-gray-50">
+      </div>
+    </div>
+
     <div class="fixed inset-0 opacity-5 pointer-events-none">
       <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3a8a' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 60px 60px;"></div>
     </div>
@@ -1249,6 +1258,87 @@
       </div>
     </section>
 
+    <section id="screens-gallery" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Screens Showcase</h2>
+          <p class="text-gray-600">Key flows in sequence</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white border border-blue-100 rounded-2xl shadow overflow-hidden">
+            <button type="button" class="relative w-full group" data-full-image="images/01_Dashboard.png" aria-label="Expand Teacher Dashboard image">
+              <img src="images/01_Dashboard.png" alt="Teacher dashboard overview" class="w-full h-56 object-cover">
+              <span class="absolute bottom-3 right-3 bg-white/80 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Expand</span>
+            </button>
+            <div class="p-4">
+              <p class="font-semibold text-blue-800">Teacher Dashboard</p>
+              <p class="text-sm text-gray-600">Upcoming classes, tasks, quick links.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-blue-100 rounded-2xl shadow overflow-hidden">
+            <button type="button" class="relative w-full group" data-full-image="images/02_SurahWorkspace.png" aria-label="Expand Surah Workspace image">
+              <img src="images/02_SurahWorkspace.png" alt="Surah workspace layout" class="w-full h-56 object-cover">
+              <span class="absolute bottom-3 right-3 bg-white/80 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Expand</span>
+            </button>
+            <div class="p-4">
+              <p class="font-semibold text-blue-800">Surah Workspace</p>
+              <p class="text-sm text-gray-600">Scholar-verified structure and prep flow.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-blue-100 rounded-2xl shadow overflow-hidden">
+            <button type="button" class="relative w-full group" data-full-image="images/03_Cusomtize_Widgets.png" aria-label="Expand Customize Widgets image">
+              <img src="images/03_Cusomtize_Widgets.png" alt="Customize widgets view" class="w-full h-56 object-cover">
+              <span class="absolute bottom-3 right-3 bg-white/80 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Expand</span>
+            </button>
+            <div class="p-4">
+              <p class="font-semibold text-blue-800">Customize Widgets</p>
+              <p class="text-sm text-gray-600">Drag-and-drop personal tools.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-blue-100 rounded-2xl shadow overflow-hidden">
+            <button type="button" class="relative w-full group" data-full-image="images/04_StickyNotes.png" aria-label="Expand Sticky Notes image">
+              <img src="images/04_StickyNotes.png" alt="Sticky notes feature" class="w-full h-56 object-cover">
+              <span class="absolute bottom-3 right-3 bg-white/80 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Expand</span>
+            </button>
+            <div class="p-4">
+              <p class="font-semibold text-blue-800">Sticky Notes</p>
+              <p class="text-sm text-gray-600">Personal reminders tied to ayat.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-blue-100 rounded-2xl shadow overflow-hidden">
+            <button type="button" class="relative w-full group" data-full-image="images/05_AudioLibrary.png" aria-label="Expand Audio Library image">
+              <img src="images/05_AudioLibrary.png" alt="Audio library screen" class="w-full h-56 object-cover">
+              <span class="absolute bottom-3 right-3 bg-white/80 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Expand</span>
+            </button>
+            <div class="p-4">
+              <p class="font-semibold text-blue-800">Audio Library</p>
+              <p class="text-sm text-gray-600">Official recordings and tracking.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-blue-100 rounded-2xl shadow overflow-hidden">
+            <button type="button" class="relative w-full group" data-full-image="images/06_SurahLibrary.png" aria-label="Expand Surah Library image">
+              <img src="images/06_SurahLibrary.png" alt="Surah library list" class="w-full h-56 object-cover">
+              <span class="absolute bottom-3 right-3 bg-white/80 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Expand</span>
+            </button>
+            <div class="p-4">
+              <p class="font-semibold text-blue-800">Surah Library</p>
+              <p class="text-sm text-gray-600">Browse and assign surahs quickly.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-blue-100 rounded-2xl shadow overflow-hidden md:col-span-2 lg:col-span-3">
+            <button type="button" class="relative w-full group" data-full-image="images/07_InClass_Mode.png" aria-label="Expand In-Class Mode image">
+              <img src="images/07_InClass_Mode.png" alt="In-class mode view" class="w-full h-72 object-cover">
+              <span class="absolute bottom-3 right-3 bg-white/80 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Expand</span>
+            </button>
+            <div class="p-4">
+              <p class="font-semibold text-blue-800">In-Class Mode</p>
+              <p class="text-sm text-gray-600">Live teaching display with quick access to essentials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="thank-you" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-blue-800 text-white relative overflow-hidden">
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-20 left-20 w-96 h-96 bg-amber-400 rounded-full blur-3xl"></div>
@@ -1258,16 +1348,14 @@
         <div class="w-28 h-28 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-2xl mb-8 border-4 border-white/20">
           <i data-lucide="hand-heart" class="w-12 h-12 text-white"></i>
         </div>
-        <p class="text-xl font-light">
-              جَزَاكُمُ اللّهُ خَيْراً
-            </p>
+        <p class="text-xl font-light">Jazakum Allahu khayran for your time.</p>
         <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Thank You</h2>
         <p class="text-2xl text-blue-100 mb-4">Questions and discussion</p>
         <p class="text-lg text-blue-100">Together we strengthen Quran teaching for every class and every teacher.</p>
       </div>
     </section>
 
-    <div id="progressIndicator" class="fixed bottom-6 left-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-full shadow-2xl px-5 py-3 text-sm font-semibold z-40 border-2 border-amber-400">1 / 34</div>
+    <div id="progressIndicator" class="fixed bottom-6 left-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-full shadow-2xl px-5 py-3 text-sm font-semibold z-40 border-2 border-amber-400">1 / 35</div>
   </div>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -1305,6 +1393,7 @@
         { id: 'database', title: 'Database', icon: 'database' },
         { id: 'train-trainer', title: 'Train the Trainer', icon: 'graduation-cap' },
         { id: 'next-steps', title: 'Next Steps', icon: 'flag' },
+        { id: 'screens-gallery', title: 'Screens Showcase', icon: 'images' },
         { id: 'impact', title: 'Impact', icon: 'list' },
         { id: 'thank-you', title: 'Thank You', icon: 'message-square' }
       ];
@@ -1315,6 +1404,9 @@
       const navItems = document.getElementById('navItems');
       const progressIndicator = document.getElementById('progressIndicator');
       const navButtons = [];
+      const imageModal = document.getElementById('imageModal');
+      const imageModalContent = document.getElementById('imageModalContent');
+      const closeImageModal = document.getElementById('closeImageModal');
 
       const toggleNav = () => {
         const isHidden = navPanel.classList.contains('translate-x-full');
@@ -1370,13 +1462,42 @@
         if (element) observer.observe(element);
       });
 
+      const openImageModal = (src, alt) => {
+        if (!imageModal || !imageModalContent) return;
+        imageModalContent.src = src;
+        imageModalContent.alt = alt || 'Expanded view';
+        imageModal.classList.remove('hidden');
+        imageModal.classList.add('flex');
+      };
+
+      const closeModal = () => {
+        if (!imageModal) return;
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex');
+      };
+
+      document.querySelectorAll('[data-full-image]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const src = btn.getAttribute('data-full-image');
+          const alt = btn.querySelector('img')?.alt;
+          if (src) openImageModal(src, alt);
+        });
+      });
+
+      imageModal?.addEventListener('click', (e) => {
+        if (e.target === imageModal) closeModal();
+      });
+      closeImageModal?.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
       setActiveSection(0);
       if (window.lucide) lucide.createIcons();
     });
   </script>
 </body>
 </html>
-
 
 
 
